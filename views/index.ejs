@@ -1,30 +1,56 @@
-<% include ./home_partials/header %>
+<% include ../partials_users/header %>
+
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <form class="col s12" action="/users/register" method="post">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">perm_identity</i>
+                            <input placeholder="Name" id="name" type="text" name="name" class="active validate" required>
+                            <label for="name">Fullname</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input placeholder="Email" id="email" type="email" name="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input placeholder="Username" id="username" name="username" type="text" class="active validate" required>
+                            <label for="username">Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">lock</i>
+                            <input placeholder="password" id="password" name="password" type="text" class="active validate" required>
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">edit</i>
+                            <input placeholder="Diagnosis" name="diagnosa" id="diagnosis" type="text" class="active validate" required>
+                            <label for="diagnosis">Diagnosis</label>
+                        </div>
+                    </div> -->
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <button class="btn" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
 
 
-<div class = "iris">
-<div class = "card transparent z-depth-5">
-  <div class="section">
-      <div class="container">
-            <br><br>
-          <h1 class="header center orange-text">Baymax Apps</h1>
-          <div class="row center">
-              <h5 class="header col s12 light">Applications to provide solutions to problems your illness</h5>
-          </div>
-          <div class="row center">
-              <a href="/users/searchDisease" id="" class="btn-large waves-effect waves-light orange">Search Disease</a>
-                <a href="/users/searchDiagnosis" id="" class="btn-large waves-effect waves-light green darken-2">Search Diagnosis</a>
-          </div>
-          <br><br>
-          <br><br>
-          <br><br>
-          <br><br>
-          <br><br>
-          <br><br>
-          <br><br>
-
-
-      </div>
-  </div>
-</div>
-</div>
-    <% include ./home_partials/footer %>
+    <% include ../partials_users/footer %>

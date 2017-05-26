@@ -4,7 +4,9 @@ const users_controller = require('../controllers/users_controller');
 const passport_twitter = require('../models/passport_twitter')
 
 router.get('/', users_controller.index);
+router.get('/register', users_controller.getRegister);
 router.post('/register', users_controller.register);
+router.get('/login', users_controller.getLogin);
 router.post('/login', users_controller.login);
 router.get('/token', users_controller.token);
 
