@@ -1,16 +1,11 @@
-const bodyMassIndex = require('body-mass-index');
-
 const express = require('express');
 const router = express.Router();
+const bmi_controller = require('../controllers/bmi_controller');
+const check = require("../helpers/util");
 
-router.post('/',function(req,res,next){
-  let bmi = bodyMassIndex('90.17kg 1lb 100g', '145.27cm 1ft 0.30m').toString();
-  console.log(bmi)
-  // music.trackSearch({q:"Chet Faker - Gold ",page:1,page_size:3})
-  // .then(function(data){
-  //         console.log(data)
-  // }).catch(function(err){
-  //         console.log(err);
-  // })
-});
+router.get('/',(req,res)=>res.render('bmi'));
+router.post('/', bmi_controller.getBmi);
+
 module.exports = router;
+
+// localhost:3000/bmi + body: weight & height
